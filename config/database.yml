@@ -21,7 +21,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  production:
     adapter: mysql2
     database: rails
     username: rails

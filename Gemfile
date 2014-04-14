@@ -31,6 +31,10 @@ gem 'rufus-scheduler'
 gem 'rest-client'
 gem 'mini_magick'
 
+group :production do
+  gem 'mysql2'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
