@@ -24,7 +24,7 @@ def execFetch
         img_src: ac.css('img')[0]['src'],
         acv_comment: ac.content,
         width: img[:width],
-        eight: img[:height],
+        height: img[:height],
         size: img[:size])
     end
   end
