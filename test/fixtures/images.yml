@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  img_src: MyString
+  acv_comment: MyString
+  width: 1
+  height: 1
+  size: 1
+
+two:
+  img_src: MyString
+  acv_comment: MyString
+  width: 1
+  height: 1
+  size: 1
