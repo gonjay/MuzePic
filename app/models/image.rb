@@ -1,5 +1,5 @@
 class Image < ActiveRecord::Base
-  # validates_uniqueness_of :imgSrc
+  validates_uniqueness_of :img_src
 
   def info
     if self.size
