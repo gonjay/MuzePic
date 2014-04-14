@@ -1,22 +1,22 @@
-<div class='col-md-4 card' style="padding:0px;padding-top:1px">
-    <% if @img.imgSrc.include?".gif" %>
-        <a href="<%= boring_image_path(@img) %>">
+<div class='col-md-3 card' style="padding:0px;padding-top:1px">
+    <% if @img.gif? %>
+        <a href="<%= image_path(@img) %>">
             <div>
             <h5><%= @img.id %> <%= @img.acv_comment %></h5>
             <small><%= @img.info %>（动态图，点击加载）</small>
             </div>
         </a>
-        <img class="lazy" data-original="<%= @img.imgSrc %>" src="./assets/grey.gif" width="765" height="574">
+        <img class="lazy" data-original="<%= @img.img_src %>" src="<%= image_path('grey.gif') %>" width="765" height="574">
     <% elsif @img.isBig? %>
-        <a href="<%= boring_image_path(@img) %>">
+        <a href="<%= image_path(@img) %>">
             <h5><%= @img.id %> <%= @img.acv_comment %></h5>
             <small><%= @img.info %>（加长夜用图片，点击加载）</small>
         </a>
-        <img class="lazy" data-original="<%= @img.imgSrc %>" src="./assets/grey.gif" width="765" height="574">
+        <img class="lazy" data-original="<%= @img.img_src %>" src="<%= image_path('grey.gif') %>" width="765" height="574">
     <% else %>
-        <a href="<%= boring_image_path(@img) %>">
+        <a href="<%= image_path(@img) %>">
             <h5><%= @img.id %> <%= @img.acv_comment %></h5>
         </a>
-        <img src="<%= @img.imgSrc %>">
+        <img src="<%= @img.img_src %>">
     <% end %>
 </div>

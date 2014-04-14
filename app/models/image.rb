@@ -24,5 +24,9 @@ class Image < ActiveRecord::Base
       return "#{self.size/1000000}MB"
     end
   end
-  
+
+  def gif?
+    return img_src.include?".gif" if img_src
+  end
+
 end

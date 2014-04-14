@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+	$("img.lazy").click(function(){
+		$(this).attr('src', './images/indicator.gif');
+		$(this).lazyload({
+			effect : "fadeIn"
+		});
+	});
+});

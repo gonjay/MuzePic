@@ -1,8 +1,8 @@
 // Place all the styles related to the Images controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-a:hover { text-decoration:none;}
-a:link { text-decoration:none;color: #999;}
+//a:hover { text-decoration:none;}
+//a:link { text-decoration:none;color: #999;}
 small{color:#ccc;}
 
 .mycontainer{
@@ -20,6 +20,7 @@ margin-top: 10px;
 box-shadow: -1px 1px 9px #e2e2e2;
 background-color: #fff;
 margin: 12px;
+min-width: 350px;
 }
 
 img{
