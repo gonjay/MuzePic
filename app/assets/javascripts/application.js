@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(function() {
+$(document).on("page:change", function(){
 	$("img.lazy").click(function(){
 		$(this).attr('src', './images/indicator.gif');
 		$(this).lazyload({
