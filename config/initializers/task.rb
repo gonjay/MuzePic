@@ -8,10 +8,10 @@ require 'mini_magick'
 require 'rufus/scheduler'
 scheduler = Rufus::Scheduler.new
 
-scheduler.every("10m") do
-
+scheduler.every("30s") do
+  execFetch
   begin
-    execFetch
+   # execFetch
   rescue Exception => e
     puts e
   end
@@ -20,7 +20,7 @@ end
 
 def execFetch
 
-  html = open("http://jandan.net").read
+  html = RestClient.get("http://jandan.net")
   doc = Nokogiri::HTML(html)
 
   doc.css('.hotcomment')[0].css('.acv_comment').each do |ac|
