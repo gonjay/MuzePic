@@ -9,7 +9,13 @@ require 'rufus/scheduler'
 scheduler = Rufus::Scheduler.new
 
 scheduler.every("10m") do
-  execFetch
+
+  begin
+    execFetch
+  rescue Exception => e
+    puts e
+  end
+  
 end
 
 def execFetch
