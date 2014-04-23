@@ -4,17 +4,20 @@
 require 'nokogiri'
 require 'rest-client'
 require 'mini_magick'
+require 'timeout'
 require 'rufus/scheduler'
 scheduler = Rufus::Scheduler.new
 
 scheduler.every("10m") do
-  
-  begin
-    execFetch
-  rescue Exception => e
-    puts e
+
+  Timeout.timeout(3) do
+    begin
+      execFetch
+    rescue Exception => e
+      puts e
+    end
   end
-  
+
 end
 
 def execFetch
